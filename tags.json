@@ -1,0 +1,287 @@
+[
+    {
+        "name": "Seven Grams",
+        "div_id": "sevengrams",
+        "popup_id": "popup1",
+        "location": ["manhattan"],
+        "tags": {
+            "wifi": "true",
+            "washroom": "true",
+            "sweet treats": "true",
+            "photo worthy":"true",
+            "specialty":"true",
+            "open past 6":"true",
+            "outlets":"true",
+            "quiet":"false",
+            "meals":"false",
+            "sofa":"false",
+            "wow": "false"
+        }
+    },
+    {
+        "name": "Plantshed",
+        "div_id": "plantshed",
+        "popup_id": "popup2",
+        "location": ["manhattan"],
+        "tags": {
+            "wifi": "true",
+            "washroom": "true",
+            "sweet treats": "true",
+            "photo worthy":"true",
+            "specialty":"false",
+            "open past 6":"true",
+            "outlets":"true",
+            "quiet":"false",
+            "meals":"true",
+            "sofa":"false",
+            "wow": "true"
+        }
+    },
+    {
+        "name": "Librae",
+        "div_id": "librae",
+        "popup_id": "popup3",
+        "location": ["manhattan"],
+        "tags": {
+            "wifi": "true",
+            "washroom": "false",
+            "sweet treats": "true",
+            "photo worthy":"true",
+            "specialty":"true",
+            "open past 6":"false",
+            "outlets":"true",
+            "quiet":"false",
+            "meals":"false",
+            "sofa":"false",
+            "wow": "true"
+        }
+    },
+    {
+        "name": "Kona Coffee Roasters",
+        "div_id": "kona",
+        "popup_id": "popup4",
+        "location": ["manhattan"],
+        "tags": {
+            "wifi": "true",
+            "washroom": "true",
+            "sweet treats": "true",
+            "photo worthy":"false",
+            "specialty":"true",
+            "open past 6":"false",
+            "outlets":"true",
+            "quiet":"false",
+            "meals":"false",
+            "sofa":"false",
+            "wow": "false"
+        }
+    },
+    {
+        "name": "Three Jewels Cafe",
+        "div_id": "threejewels",
+        "popup_id": "popup5",
+        "location": ["manhattan"],
+        "tags": {
+            "wifi": "true",
+            "washroom": "true",
+            "sweet treats": "true",
+            "photo worthy":"true",
+            "specialty":"false",
+            "open past 6":"true",
+            "outlets":"true",
+            "quiet":"true",
+            "meals":"false",
+            "sofa":"false",
+            "wow": "false"
+        }
+    },
+    {
+        "name": "Remi43",
+        "div_id": "remi43",
+        "popup_id": "popup6",
+        "location": ["manhattan"],
+        "tags": {
+            "wifi": "true",
+            "washroom": "true",
+            "sweet treats": "true",
+            "photo worthy":"true",
+            "specialty":"true",
+            "open past 6":"false",
+            "outlets":"true",
+            "quiet":"false",
+            "meals":"false",
+            "sofa":"false",
+            "wow": "true"
+        }
+    },
+    {
+        "name": "Devocion",
+        "div_id": "devocion",
+        "popup_id": "popup7",
+        "location": ["manhattan", "brooklyn"],
+        "tags": {
+            "wifi": "true",
+            "washroom": "true",
+            "sweet treats": "true",
+            "photo worthy":"true",
+            "specialty":"true",
+            "open past 6":"true",
+            "outlets":"true",
+            "quiet":"false",
+            "meals":"false",
+            "sofa":"true",
+            "wow": "true"
+        }
+    },
+    {
+        "name": "Usagi",
+        "div_id": "usagi",
+        "popup_id": "popup8",
+        "location": ["brooklyn"],
+        "tags": {
+            "wifi": "true",
+            "washroom": "true",
+            "sweet treats": "true",
+            "photo worthy":"true",
+            "specialty":"true",
+            "open past 6":"false",
+            "outlets":"true",
+            "quiet":"true",
+            "meals":"true",
+            "sofa":"true",
+            "wow": "true"
+        }
+    },
+    {
+        "name": "La Obra Cafe",
+        "div_id": "laobra",
+        "popup_id": "popup9",
+        "location": ["brooklyn"],
+        "tags": {
+            "wifi": "true",
+            "washroom": "true",
+            "sweet treats": "true",
+            "photo worthy":"true",
+            "specialty":"true",
+            "open past 6":"false",
+            "outlets":"true",
+            "quiet":"true",
+            "meals":"false",
+            "sofa":"true",
+            "wow": "true"
+        }
+    },
+    {
+        "name": "787 Coffee",
+        "div_id": "seveneightcoffee",
+        "popup_id": "popup10",
+        "location": ["manhattan"],
+        "tags": {
+            "wifi": "true",
+            "washroom": "true",
+            "sweet treats": "true",
+            "photo worthy":"true",
+            "specialty":"true",
+            "open past 6":"true",
+            "outlets":"true",
+            "quiet":"true",
+            "meals":"false",
+            "sofa":"false",
+            "wow": "false"
+        }
+    },
+    {
+        "name": "Bibliotheque",
+        "div_id": "bibliotheque",
+        "popup_id": "popup11",
+        "location": ["manhattan"],
+        "tags": {
+            "wifi": "true",
+            "washroom": "true",
+            "sweet treats": "true",
+            "photo worthy":"true",
+            "specialty":"true",
+            "open past 6":"false",
+            "outlets":"true",
+            "quiet":"false",
+            "meals":"true",
+            "sofa":"true",
+            "wow": "true"
+        }
+    },
+    {
+        "name": "Partners Coffee",
+        "div_id": "partners",
+        "popup_id": "popup12",
+        "location": ["manhattan", "brooklyn"],
+        "tags": {
+            "wifi": "true",
+            "washroom": "true",
+            "sweet treats": "true",
+            "photo worthy":"false",
+            "specialty":"true",
+            "open past 6":"false",
+            "outlets":"true",
+            "quiet":"false",
+            "meals":"false",
+            "sofa":"false",
+            "wow": "false"
+        }
+    },
+    {
+        "name": "Ariston",
+        "div_id": "ariston",
+        "popup_id": "popup13",
+        "location": ["manhattan"],
+        "tags": {
+            "wifi": "true",
+            "washroom": "true",
+            "sweet treats": "true",
+            "photo worthy":"true",
+            "specialty":"true",
+            "open past 6":"true",
+            "outlets":"true",
+            "quiet":"false",
+            "meals":"false",
+            "sofa":"false",
+            "wow": "true"
+        }
+    },
+    {
+        "name": "Blue Bottle",
+        "div_id": "bluebottle",
+        "popup_id": "popup14",
+        "location": ["manhattan", "brooklyn"],
+        "tags": {
+            "wifi": "true",
+            "washroom": "true",
+            "sweet treats": "true",
+            "photo worthy":"false",
+            "specialty":"false",
+            "open past 6":"true",
+            "outlets":"true",
+            "quiet":"false",
+            "meals":"false",
+            "sofa":"false",
+            "wow": "false"
+        }
+    },
+    {
+        "name": "Hungry Ghost",
+        "div_id": "hungryghost",
+        "popup_id": "popup15",
+        "location": ["manhattan", "brooklyn"],
+        "tags": {
+            "wifi": "true",
+            "washroom": "true",
+            "sweet treats": "true",
+            "photo worthy":"false",
+            "specialty":"false",
+            "open past 6":"true",
+            "outlets":"true",
+            "quiet":"false",
+            "meals":"false",
+            "sofa":"false",
+            "wow": "false"
+        }
+    }
+]
