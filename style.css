@@ -504,6 +504,7 @@ overflow: hidden;
   height: auto;
   padding: 0%;
   white-space: nowrap;
+  z-index: 1002;
 }
 #search-bar:focus {
   outline: none;
