@@ -33,7 +33,7 @@ body {
     top: -100%;
     left: 0;
     animation: slideDownMenu 2.5s forwards;
-    margin-top: 95vh;
+    margin-top: 200%;
   }
   
   @keyframes slideDownMenu {
@@ -82,7 +82,7 @@ color: rgb(135, 118, 91);
 
   .receipt {
     width: 60vw; /* Adjust the width to 90% of the viewport width */
-    height: 75%;
+    height: 93%;
     left: 15vw;
     position: absolute;
     background-image: url(./receipt\ w\ graphics.png);
@@ -199,7 +199,7 @@ a:hover {
   background-size: cover;
   padding: 20px;
   border: 1px solid #ccc;
-  z-index: 999;
+  z-index: 1001;
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
   border-radius: 10px;
   animation: slideForward 0.3s forwards; /* Apply slide forward animation */
@@ -208,7 +208,7 @@ a:hover {
 
 #cafecontent {
   overflow-y: scroll;
-  max-height: 71vh;
+  max-height: 65vh;
   overflow-x: hidden;
 
 }
@@ -829,7 +829,7 @@ a:hover {
   background-size: cover;
   padding: 20px;
   border: 1px solid #ccc;
-  z-index: 2;
+  z-index: 1001;
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
   border-radius: 10px;
   animation: slideForward 0.3s forwards; /* Apply slide forward animation */
@@ -839,7 +839,7 @@ a:hover {
 
 #cafecontent {
   overflow-y: scroll;
-  max-height: 71vh;
+  max-height: 65vh;
 }
 
 @keyframes slideForward {
@@ -1096,7 +1096,7 @@ li {
     padding-left: 2%;
     width: 100%;
     position: absolute;
-    z-index: 1000;
+    z-index: 999;
   }
   #search-bar {
     width: 25%;
