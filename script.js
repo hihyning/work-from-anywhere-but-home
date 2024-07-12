@@ -501,3 +501,23 @@ function changeSlide15(n) {
 
 //end
 
+let slide16Index = 0;
+let slide16Src = ["./sammyl/sammyl1.jpg", "./sammyl/sammyl2.jpg", "./sammyl/sammyl3.jpg"];
+showSlide16(slide16Index);
+
+function showSlide16(index) {
+  const slide = document.getElementById('slide16');
+  slide.src = slide16Src[index];
+}
+
+function changeSlide16(n) {
+  const slide = document.getElementById('slide16');
+  slide16Index = (slide16Index + n + 3) % 3;
+  slide.src = slide16Src[slide16Index];
+  console.log(slide.src);
+  showSlide16(slide16Index);
+  console.log("change");
+}
+
+//end
+
