@@ -521,3 +521,22 @@ function changeSlide16(n) {
 
 //end
 
+let slide17Index = 0;
+let slide17Src = ["./conwell/conwell1.jpg", "./conwell/conwell2.jpg", "./conwell/conwell3.jpg"];
+showSlide17(slide17Index);
+
+function showSlide17(index) {
+  const slide = document.getElementById('slide17');
+  slide.src = slide17Src[index];
+}
+
+function changeSlide17(n) {
+  const slide = document.getElementById('slide17');
+  slide17Index = (slide17Index + n + 3) % 3;
+  slide.src = slide17Src[slide17Index];
+  console.log(slide.src);
+  showSlide17(slide17Index);
+  console.log("change");
+}
+
+//end
