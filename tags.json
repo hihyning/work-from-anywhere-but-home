@@ -300,6 +300,25 @@
             "meals":"true",
             "sofa":"false",
             "wow": "true"
+        },
+         {
+        "name": "Conwell Coffee Hall",
+        "div_id": "conwell",
+        "popup_id": "popup17",
+        "location": ["manhattan"],
+        "tags": {
+            "wifi": "true",
+            "washroom": "true",
+            "sweet treats": "true",
+            "photo worthy":"true",
+            "specialty":"true",
+            "open past 6":"false",
+            "outlets":"true",
+            "quiet":"true",
+            "meals":"true",
+            "sofa":"true",
+            "wow": "true"
         }
+    }
     }
 ]
