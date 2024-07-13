@@ -453,6 +453,13 @@ li {
 #sammyllogo img {
   width: 30%;
 }
+#conwellicon img {
+  width: 110%;
+  transform: translatey(-1vh);
+}
+#conwelllogo img {
+  width:30%;
+}
 #photos {
   display: flex;
 }
@@ -1058,6 +1065,12 @@ li {
     width: 63%;
   }
   #sammyllogo img {
+    width: 30%;
+  }
+  #conwellicon img {
+    width: 60%;
+  }
+  #conwelllogo img {
     width: 30%;
   }
   #photos {
