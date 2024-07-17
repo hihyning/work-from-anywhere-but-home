@@ -580,3 +580,23 @@ function changeSlide19(n) {
 }
 
 //end
+
+let slide20Index = 0;
+let slide20Src = ["./blue stripes/blue stripes1.jpg", "./blue stripes/blue stripes2.jpg", "./blue stripes/blue stripes3.jpg"];
+showSlide20(slide20Index);
+
+function showSlide20(index) {
+  const slide = document.getElementById('slide20');
+  slide.src = slide20Src[index];
+}
+
+function changeSlide20(n) {
+  const slide = document.getElementById('slide20');
+  slide20Index = (slide20Index + n + 3) % 3;
+  slide.src = slide20Src[slide20Index];
+  console.log(slide.src);
+  showSlide20(slide20Index);
+  console.log("change");
+}
+
+//end
