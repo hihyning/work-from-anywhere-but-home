@@ -561,3 +561,22 @@ function changeSlide18(n) {
 }
 
 //end
+let slide19Index = 0;
+let slide19Src = ["./outro/outro1.jpg", "./outro/outro2.jpg", "./outro/outro3.jpg"];
+showSlide19(slide19Index);
+
+function showSlide19(index) {
+  const slide = document.getElementById('slide19');
+  slide.src = slide19Src[index];
+}
+
+function changeSlide19(n) {
+  const slide = document.getElementById('slide19');
+  slide19Index = (slide19Index + n + 3) % 3;
+  slide.src = slide19Src[slide19Index];
+  console.log(slide.src);
+  showSlide19(slide19Index);
+  console.log("change");
+}
+
+//end
