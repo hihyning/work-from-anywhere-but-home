@@ -336,7 +336,26 @@
             "meals":"true",
             "sofa":"false",
             "wow": "true"
+        },
+            {
+        "name": "Outro",
+        "div_id": "outro",
+        "popup_id": "popup19",
+        "location": ["manhattan"],
+        "tags": {
+            "wifi": "true",
+            "washroom": "true",
+            "sweet treats": "true",
+            "photo worthy":"true",
+            "specialty":"true",
+            "open past 6":"true",
+            "outlets":"true",
+            "quiet":"true",
+            "meals":"true",
+            "sofa":"true",
+            "wow": "false"
         }
+    }
     }
     }
     }
