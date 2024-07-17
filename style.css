@@ -467,6 +467,13 @@ li {
   width: 60%;
   margin-top: -1%;
 }
+#outroicon img {
+  width: 110%;
+}
+#outrologo img {
+  width: 70%;
+  margin: 0%;
+}
 #photos {
   display: flex;
 }
@@ -1086,6 +1093,13 @@ li {
   #gatherlogo img {
     width: 45%;
     margin-top: -3%;
+  }
+  #outroicon img {
+    width: 65%;
+  }
+  #outrologo img {
+    width: 50%;
+    margin: 0%;
   }
   #photos {
     display: flex;
