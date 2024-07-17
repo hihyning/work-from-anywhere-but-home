@@ -540,3 +540,24 @@ function changeSlide17(n) {
 }
 
 //end
+
+
+let slide18Index = 0;
+let slide18Src = ["./gather/gather1.jpg", "./gather/gather2.png", "./gather/gather3.png"];
+showSlide18(slide18Index);
+
+function showSlide18(index) {
+  const slide = document.getElementById('slide18');
+  slide.src = slide18Src[index];
+}
+
+function changeSlide18(n) {
+  const slide = document.getElementById('slide18');
+  slide18Index = (slide18Index + n + 3) % 3;
+  slide.src = slide18Src[slide18Index];
+  console.log(slide.src);
+  showSlide18(slide18Index);
+  console.log("change");
+}
+
+//end
