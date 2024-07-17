@@ -318,7 +318,26 @@
             "meals":"true",
             "sofa":"true",
             "wow": "true"
+        },
+            {
+        "name": "Gather",
+        "div_id": "gather",
+        "popup_id": "popup18",
+        "location": ["manhattan"],
+        "tags": {
+            "wifi": "true",
+            "washroom": "true",
+            "sweet treats": "true",
+            "photo worthy":"true",
+            "specialty":"true",
+            "open past 6":"true",
+            "outlets":"true",
+            "quiet":"true",
+            "meals":"true",
+            "sofa":"false",
+            "wow": "true"
         }
+    }
     }
     }
 ]
