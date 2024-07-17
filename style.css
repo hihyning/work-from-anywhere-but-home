@@ -474,6 +474,14 @@ li {
   width: 70%;
   margin: 0%;
 }
+#bluestripesicon img{
+  width: 110%;
+  margin-bottom: 30%;
+  transform: translateX(-6%)
+}
+#bluestripeslogo img{
+  width: 100%;
+}
 #photos {
   display: flex;
 }
@@ -1100,6 +1108,13 @@ li {
   #outrologo img {
     width: 50%;
     margin: 0%;
+  }
+  #bluestripesicon img{
+    width: 70%;
+    margin-bottom: 13%;
+  }
+  #bluestripeslogo img{
+    width: 60%;
   }
   #photos {
     display: flex;
