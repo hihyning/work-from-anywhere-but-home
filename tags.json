@@ -354,7 +354,26 @@
             "meals":"true",
             "sofa":"true",
             "wow": "false"
+        },
+        {
+        "name": "Blue Stripes",
+        "div_id": "bluestripes",
+        "popup_id": "popup20",
+        "location": ["manhattan"],
+        "tags": {
+            "wifi": "true",
+            "washroom": "true",
+            "sweet treats": "true",
+            "photo worthy":"false",
+            "specialty":"true",
+            "open past 6":"true",
+            "outlets":"true",
+            "quiet":"false",
+            "meals":"true",
+            "sofa":"false",
+            "wow": "false"
         }
+    }
     }
     }
     }
