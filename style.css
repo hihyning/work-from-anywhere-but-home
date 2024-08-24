@@ -33,7 +33,7 @@ body {
     top: -100%;
     left: 0;
     animation: slideDownMenu 2.5s forwards;
-    margin-top: 200%;
+    margin-top: 95vh;
   }
   
   @keyframes slideDownMenu {
@@ -82,7 +82,7 @@ color: rgb(135, 118, 91);
 
   .receipt {
     width: 60vw; /* Adjust the width to 90% of the viewport width */
-    height: 93%;
+    height: 75%;
     left: 15vw;
     position: absolute;
     background-image: url(./receipt\ w\ graphics.png);
@@ -199,7 +199,7 @@ a:hover {
   background-size: cover;
   padding: 20px;
   border: 1px solid #ccc;
-  z-index: 1001;
+  z-index: 999;
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
   border-radius: 10px;
   animation: slideForward 0.3s forwards; /* Apply slide forward animation */
@@ -208,7 +208,7 @@ a:hover {
 
 #cafecontent {
   overflow-y: scroll;
-  max-height: 65vh;
+  max-height: 71vh;
   overflow-x: hidden;
 
 }
@@ -441,14 +441,13 @@ li {
 
 #hungryghosticon img {
   width: 110%;
-  transform: translateX(-3vw)
+  transform: translateX(-3vw);
 }
 #hungryghostlogo img {
   width: 80%;
 }
 #sammylicon img {
   width: 110%;
-  transform: translatey(-1vh);
 }
 #sammyllogo img {
   width: 30%;
@@ -469,6 +468,7 @@ li {
 }
 #outroicon img {
   width: 110%;
+  transform: translateX(-2%)
 }
 #outrologo img {
   width: 70%;
@@ -540,7 +540,6 @@ overflow: hidden;
   height: auto;
   padding: 0%;
   white-space: nowrap;
-  z-index: 1003;
 }
 #search-bar:focus {
   outline: none;
@@ -866,7 +865,7 @@ a:hover {
   background-size: cover;
   padding: 20px;
   border: 1px solid #ccc;
-  z-index: 1001;
+  z-index: 2;
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
   border-radius: 10px;
   animation: slideForward 0.3s forwards; /* Apply slide forward animation */
@@ -876,7 +875,7 @@ a:hover {
 
 #cafecontent {
   overflow-y: scroll;
-  max-height: 65vh;
+  max-height: 71vh;
 }
 
 @keyframes slideForward {
@@ -1083,7 +1082,7 @@ li {
   #hungryghost img {
     width: 60%
   }
-    #sammylicon img {
+  #sammylicon img {
     width: 63%;
   }
   #sammyllogo img {
@@ -1095,7 +1094,7 @@ li {
   #conwelllogo img {
     width: 30%;
   }
-    #gathericon img {
+  #gathericon img {
     width: 65%;
   }
   #gatherlogo img {
@@ -1115,6 +1114,11 @@ li {
   }
   #bluestripeslogo img{
     width: 60%;
+  }
+  #process {
+    border-color: #5A3418;
+    border-width: 2px;
+    border-radius: 10px
   }
   #photos {
     display: flex;
@@ -1166,7 +1170,7 @@ li {
     padding-left: 2%;
     width: 100%;
     position: absolute;
-    z-index: 999;
+    z-index: 1000;
   }
   #search-bar {
     width: 25%;
@@ -1212,7 +1216,7 @@ li {
     left: 35%;
     transform: translateX(-30%); /* Center horizontally */
     width: 40%; /* Full width */
-    z-index: 1000; /* Ensure it's on top of other elements */
+    z-index: 1002; /* Ensure it's on top of other elements */
     display: flex;
     flex-direction: row;
     margin-top: 0.1%;
