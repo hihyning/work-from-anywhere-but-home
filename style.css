@@ -123,7 +123,7 @@ color: rgb(135, 118, 91);
 
 #submissionBox {
   align-items: left;
-  width: 110%;
+  width: auto;
   margin-top: 0%;
   padding-left: 3%;
 }
