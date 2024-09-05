@@ -81,7 +81,7 @@ color: rgb(135, 118, 91);
 }
 
   .receipt {
-    width: 60vw; /* Adjust the width to 90% of the viewport width */
+    width: 50vw; /* Adjust the width to 90% of the viewport width */
     height: 75%;
     left: 15vw;
     position: absolute;
@@ -99,7 +99,7 @@ color: rgb(135, 118, 91);
   }
 
   .introtext {
-    width: 67vw
+    width: 57vw
   }
 
 
@@ -114,7 +114,7 @@ color: rgb(135, 118, 91);
 
 .receipttext {
   padding-left: 2vw;
-  width: 68vw;
+  width: 55vw;
 }
 
 .receipttext p {
@@ -130,7 +130,7 @@ color: rgb(135, 118, 91);
 
 #nameInput {
   height: 25%;
-  width: 80%;
+  width: 75%;
   left: 0;
   padding-left: 4%;
   padding-right: 3%;
@@ -234,7 +234,7 @@ a:hover {
 
 .thanks {
   margin-top: -22%;
-  width: 72vw;
+  width: 55vw;
   font-size: 130%;
 }
 
