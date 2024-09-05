@@ -81,9 +81,9 @@ color: rgb(135, 118, 91);
 }
 
   .receipt {
-    width: 50vw; /* Adjust the width to 90% of the viewport width */
+    width: 55vw; /* Adjust the width to 90% of the viewport width */
     height: 75%;
-    left: 15vw;
+    left: 18vw;
     position: absolute;
     background-image: url(./receipt\ w\ graphics.png);
     background-repeat: no-repeat;
