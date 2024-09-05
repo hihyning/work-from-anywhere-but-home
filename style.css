@@ -1,0 +1,1313 @@
+/* For mobile devices (up to 768px width) */
+body {
+  background-image: url('paper_texture.jpg'), url('./menu\ background.png');
+  background-color: rgb(232, 227, 210);
+  background-size: 100vw 100vh cover;
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  cursor: url('./WFABH\ Cursor.png'), auto; /* Set cursor globally */
+  overflow-x: none;
+}
+
+@media only screen and (max-width: 768px) {
+  .image-container {
+    margin-left: 20%;
+  }
+  .menu-container {
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .menu {
+    display: grid;
+    grid-template-columns: repeat(2, calc(50% - 5vw));
+    grid-row-gap: 5vw;
+    grid-template-rows: auto;
+    justify-content: center;
+    align-items: center;
+    padding-top: 3%;
+    margin: 0 auto;
+    width: 100%;
+    position: absolute;
+    top: -100%;
+    left: 0;
+    animation: slideDownMenu 2.5s forwards;
+    margin-top: 95vh;
+  }
+  
+  @keyframes slideDownMenu {
+    from {
+      top: -100%;
+    }
+    to {
+      top: 0;
+    }
+  }
+  
+  .image-container {
+    width: auto;
+    padding-left: 5%;
+    display: grid;
+    grid-template-rows: auto auto;
+    justify-items: center;
+    padding-left: 2%;
+    padding-right: 2%;
+  }
+  
+  .image-container img {
+    min-width: 60%;
+    height: auto;
+    margin-bottom: 10px;
+    margin-left: 2%;
+    margin-right: 2%;
+  }
+
+.menu a {
+  text-align: center;
+  text-decoration: none;
+  color: black;
+}
+
+.menu img {
+  width: 50%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
+
+.menu img:hover {
+color: rgb(135, 118, 91);
+}
+
+  .receipt {
+    width: 60vw; /* Adjust the width to 90% of the viewport width */
+    height: 75%;
+    left: 15vw;
+    position: absolute;
+    background-image: url(./receipt\ w\ graphics.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    padding: 7%;
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    animation: slideDown 2.5s forwards;
+    margin-top: 30%;
+    font-size: 80%;
+    z-index: 2;
+  }
+
+  .introtext {
+    width: 67vw
+  }
+
+
+@keyframes slideDown {
+  from {
+    top: -100%; /* Start from off-screen position */
+  }
+  to {
+    top: 0; /* Slide down to position */
+  }
+}
+
+.receipttext {
+  padding-left: 2vw;
+  width: 68vw;
+}
+
+.receipttext p {
+  font-size: 100%;
+}
+
+#submissionBox {
+  align-items: left;
+  width: 110%;
+  margin-top: 0%;
+  padding-left: 3%;
+}
+
+#nameInput {
+  height: 25%;
+  width: 80%;
+  left: 0;
+  padding-left: 4%;
+  padding-right: 3%;
+  padding-bottom: 2%;
+  padding-top: 2%;
+  border-radius: 15px;
+  font-family: "IBM Plex Mono", monospace;
+  font-weight: 400;
+  border-width: 2px;
+  font-size: 90%;
+  font-style:italic;
+  border-color: #000000;
+}
+
+#nameInput:focus {
+  border: none;
+  outline: none;
+  border-color: rgb(135, 118, 91);
+  box-shadow: 0 0 10px rgb(135, 118, 91);
+}
+
+button {
+  margin-top: 3%;
+  padding-top: 2%;
+  padding-bottom: 2%;
+  padding-left: 5%;
+  padding-right: 5%;
+  height: 100%;
+  background-color: #000000;
+  color: white;
+  border: none;
+  border-radius: 15px;
+  cursor: pointer;
+  font-family: "IBM Plex Mono", monospace;
+  font-weight: 600;
+  height: auto;
+  font-size: 70%;
+}
+
+p {
+  font-family: "IBM Plex Mono", monospace;
+  font-weight: 400;
+  white-space: pre-wrap;
+}
+
+a {
+  text-decoration: none;
+}
+
+a:hover {
+  font-style: bolder;
+  font-weight: 700;
+  color: rgb(135, 118, 91);
+  font-style: italic;
+}
+
+.popup {
+  font-size: 5vw;
+  display: none; /* Initially hide the popup */
+  position: fixed;
+  width: 70%; 
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-image: url(./paper\ texture.jpg);
+  background-size: cover;
+  padding: 20px;
+  border: 1px solid #ccc;
+  z-index: 999;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+  border-radius: 10px;
+  animation: slideForward 0.3s forwards; /* Apply slide forward animation */
+  max-height: 70%;
+}
+
+#cafecontent {
+  overflow-y: scroll;
+  max-height: 71vh;
+  overflow-x: hidden;
+
+}
+
+@keyframes slideForward {
+  from {
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(0.8); /* Start from smaller size */
+  }
+  to {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1); /* Scale to original size */
+  }
+}
+
+.logos img{
+  width: 50%
+}
+
+.notes p{
+  margin-top: 7%
+}
+
+.thanks {
+  margin-top: -22%;
+  width: 72vw;
+  font-size: 130%;
+}
+
+.close-btn {
+  position: fixed;
+  top: 2vh;
+  right: 2vw;
+  padding: 2%;
+  width: 8vw;
+  color: rgb(0, 0, 0,0.8);
+  transition: transform 0.3s ease-in-out; /* Smooth transition for rotation and scaling */
+}
+
+.close-btn:hover {
+  opacity: 1;
+  transform: rotate(90deg) scale(1.5);
+}
+
+ ol {
+  margin-top: 0%;
+  list-style: circle;
+  padding: 0%;
+  padding-bottom: 0%;
+  margin-bottom: 0%;
+  padding-left: 10%;
+  font-size: 80%;
+}
+
+li p{
+  padding-top: 0%;
+  padding-bottom: 0%;
+  margin-bottom: 0%;
+  line-height: 0.2;
+}
+
+li {
+  padding-top: 0%;
+  padding-bottom: 0%;
+}
+
+.number-container {
+  display: flex;
+  align-items: center;
+  margin-bottom: 0%;
+  width: 50%;
+  padding-top: 3%;
+  padding-right: 20%;
+  transform: translateY(-5vh);
+  margin-left: 50%
+}
+
+.number-container button {
+  margin-left: 1%;
+  margin-right: 1%;
+  margin-top: 2%;
+  width: 30%;
+  padding: 0%;
+  background-color: rgb(0, 0, 0,0);
+  border: none;
+  border-radius: 15px;
+  font-family: "IBM Plex Mono", monospace;
+  font-weight: 400;
+}
+
+#number {
+  margin-top:1%;
+  font-family: "IBM Plex Mono", monospace;
+  font-weight: 600;
+  white-space: pre-wrap;
+}
+
+#datetime {
+  margin-top: 40vw;
+  padding-top: 5%;
+}
+
+.notes {
+  display: flex;
+  font-size: 60%;
+}
+
+#checklist {
+  flex-direction: row;
+  width: 80%;
+}
+
+#notesfr{
+  margin-top: -1%;
+  width: 70%;
+}
+
+#yes #no {
+  width: 70%;
+}
+
+#mapFrame {
+  margin: 2%;
+}
+
+#sevengrams p {
+  width: 130%;
+}
+
+#sevengramslogo img {
+  width: 60%
+}
+#sevengrams img {
+  width: 80%
+}
+
+#plantshedlogo img{
+  width: 75%
+}
+#plantshed img{
+  width: 85%
+}
+
+#libraelogo img {
+  width: 70%
+}
+#librae img {
+  width: 65%
+}
+
+#konalogo img {
+  width: 85%
+}
+#kona img {
+  width: 80%;
+}
+
+#threejewelslogo img {
+  width: 70%;
+}
+#threejewels img {
+  width: 100%
+}
+
+#remi43logo img {
+  width: 50%;
+}
+#remi43 img {
+  width: 90%;
+}
+
+#devocionlogo img {
+  width: 80%
+}
+#devocion img {
+  width: 120%;
+}
+
+#usagilogo img {
+  width: 80%;
+}
+#usagi img {
+  width: 70%;
+}
+
+#laobralogo img {
+  width: 85%;
+}
+#laobra img{
+  width: 100%
+}
+
+#seveneightlogo img {
+  width: 60%;
+}
+#seveneightcoffee img {
+  width: 70%;
+}
+
+#bibliologo img {
+  width: 50%
+}
+
+#biblioicon img {
+  width: 100%
+}
+
+#partnerslogo img {
+  width: 20%
+}
+
+#partnersicon {
+  width: 150%
+}
+
+#aristonlogo img {
+  width: 90%;
+}
+#ariston img {
+  width: 140%;
+  transform: translateX(-6vw)
+}
+
+#bluebottleicon img {
+  width: 100%
+}
+#bluebottlelogo img {
+  width: 5%
+}
+
+#hungryghosticon img {
+  width: 110%;
+  transform: translateX(-3vw);
+}
+#hungryghostlogo img {
+  width: 80%;
+}
+#sammylicon img {
+  width: 110%;
+}
+#sammyllogo img {
+  width: 30%;
+}
+#conwellicon img {
+  width: 110%;
+  transform: translatey(-1vh);
+}
+#conwelllogo img {
+  width:30%;
+}
+#gathericon img {
+  width: 110%;
+}
+#gatherlogo img {
+  width: 60%;
+  margin-top: -1%;
+}
+#outroicon img {
+  width: 110%;
+  transform: translateX(-2%)
+}
+#outrologo img {
+  width: 70%;
+  margin: 0%;
+}
+#bluestripesicon img{
+  width: 110%;
+  margin-bottom: 30%;
+  transform: translateX(-6%)
+}
+#bluestripeslogo img{
+  width: 100%;
+}
+#photos {
+  display: flex;
+}
+#slideshow {
+flex-direction: row;
+overflow: hidden;
+}
+#slideshow img {
+  height: auto;
+  border-radius: 10px;
+  margin: 1%;
+  margin-top: 5%;
+  margin-bottom: 3%;
+  margin-left: 2%;
+}
+
+.prev, .next {
+  cursor: pointer;
+  padding: 2%;
+  position: relative;
+  font-weight: bold;
+  font-size: 6vw;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+  top: 50%;
+  margin-top: 5%;
+  margin-left: 35%;
+}
+.prev {
+  left: 0;
+  margin-right: 10%;
+  transform: translateX(20%)
+}
+
+.next {
+  right: 0;
+  margin-left: 2%;
+  transform: translateX(80%)
+}
+
+.prev .next :hover{
+  font-style: none;
+  color:rgb(135, 118, 91);
+}
+#slideshow img {
+  width: 92%;
+  height: 85%;
+  border-radius: 10px;
+  margin-top: 1%;
+  padding: 1%;
+}
+.search-container {
+  width: 100%;
+  position: absolute;
+  height: auto;
+  padding: 0%;
+  white-space: nowrap;
+}
+#search-bar:focus {
+  outline: none;
+  border-color: rgb(135, 118, 91);
+  box-shadow: 0 0 10px rgb(135, 118, 91);
+}
+
+#search-bar {
+  width: 64%;
+  padding: 2% 2%;
+  padding-left: 2%;
+  font-size: 0.9em;
+  border: 2.1px solid rgb(135, 118, 91);
+  border-radius: 20px;
+  margin-left: 5%;
+  font-style: italic;
+  font-family: "IBM Plex Mono", monospace;
+  margin-right: 0.8%;
+  margin-top: 5%;
+  background-color: #00000000;
+  z-index: 100
+}
+
+#search-button {
+  font-size: 1em;
+  border-radius: 20px;
+  background-color: rgb(135, 118, 91);
+  color: white;
+  width: 25%;
+  height: 10%;
+  padding: 1% 1%;
+  z-index: 100;
+  margin-left: 2%;
+}
+
+#search-button:active{
+  outline: none;
+  color: rgb(135, 118, 91);
+  background-color: white;
+}
+.filter-container {
+  text-align: center;
+  width: 100%;
+  padding: 3%;
+  position: absolute; /* Fixed position to stay at the top */
+  display: flex;
+  flex-direction: row;
+  margin-top: 10%;
+  z-index: 1000;
+}
+
+#tag-filter {
+  margin-right: 2%;
+  margin-top: 0.5%;
+  margin-left: 3%;
+  margin-bottom: 0%;
+  width: 40%
+}
+#location-filter {
+  margin-right: 2%;
+  margin-top: 0.5%;
+  margin-left: 3%;
+  margin-bottom: 0%;
+  width: 40%
+}
+
+#tag-filter-toggle{
+display: flex;
+flex-direction: row;
+margin-bottom: 0%;
+margin: 0%;
+padding: 0%;
+}
+
+#location-filter-toggle{
+display: flex;
+flex-direction: row;
+margin-bottom: 0%;
+margin: 0%;
+padding: 0%;
+}
+
+.multi-select {
+  height: auto;
+  font-size: 0.8em;
+  border: 2px solid rgb(135, 118, 91);
+  border-radius: 10px;
+  cursor: pointer;
+  font-family: "IBM Plex Mono", monospace;
+  font-weight: 400;
+  background-color: transparent; /* Set background color to transparent */
+  text-align: left;
+  overflow-y: scroll;
+  padding: 7%;
+  padding-right: 3%;
+  background-color: rgb(232, 229, 210);
+  margin: 0%;
+}
+
+/* Style the label and ensure it's clickable */
+.multi-select label {
+  display: inline-flex; /* Ensure each label is a block element */
+}
+
+/* Style for checked state */
+.multi-select input[type="checkbox"]:checked + label{
+  background-color: #654321; /* Brown background color when checked */
+}
+
+/* Optional: Style the check mark inside the checkbox */
+.multi-select input[type="checkbox"]:checked + label::before::after {
+  content: "\2713"; /* Unicode check mark character */
+  display: block;
+  text-align: center;
+  line-height: 16px;
+  color: #fff; /* White color for check mark */
+}
+
+h3 {
+font-family: "IBM Plex Mono", monospace;
+font-weight: 700;
+white-space: pre-wrap;
+font-size: 1em;
+color:rgb(135, 118, 91)
+}
+
+#filter-button {
+padding: 1% 6%;
+height: 100%;
+font-size: 1EM;
+border-radius: 20px;
+background-color: rgb(135, 118, 91);
+color: white;
+}
+
+.toggle-button {
+display: inline-block;
+cursor: pointer;
+font-size: 2.5em;
+font-weight: 400;
+color: rgb(135, 118, 91);
+margin: 0%;
+padding-top: 2%;
+margin-right: 0%;
+padding-right: 0%;
+transition: transform 0.3s ease; /* Smooth transition for rotation */
+}
+
+.toggle-button span {
+display: inline-block; /* Ensures span behaves like an inline element */
+transition: transform 0.3s ease; /* Smooth transition for rotation */
+margin: 0%;
+}
+
+.filter-section {
+display: none;
+}
+
+.filter-section.active {
+display: block;
+}}
+
+@media only screen and (min-width: 769px) {
+  .menu {
+    display: grid;
+    grid-template-columns: repeat(5, 0.2fr);
+    grid-template-rows: repeat(3, 0.2fr);
+    grid-gap: 0px;
+    justify-content: center;
+    align-items: center;
+    margin-top: 7%;
+    margin-right: 2%;
+    margin-left: 3%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 75vw;
+    height: auto;
+    right: 0;
+    top: 0;
+    z-index: 1;
+    position: absolute
+  }
+  .receipt {
+    position: fixed;
+    top: 0%;
+    left: 0;
+    width: 19vw;
+    height: 100vh;
+    background-image: url(./receipt\ w\ graphics.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    padding-left: 2%;
+    padding-right: 0%;
+    margin-left: 1%;
+    margin-top: 0%;
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    animation: slideDown 2.5s forwards;
+    z-index: 2;
+  }
+  .receipttext {
+    padding-left: 5%;
+    font-size: 90%;
+  }
+  .introtext{
+    padding-left: 1%;
+  }
+  
+  @keyframes slideDown {
+    from {
+      top: -100%;
+    }
+    to {
+      top: 0;
+    }
+  }
+
+.image-container{
+  position: relative;
+  padding-left: 5%;
+  display: grid;
+  grid-template-rows: auto auto; /* Set grid rows for image and text */
+  justify-items: center; /* Center items horizontally */
+  right: 0;
+}
+
+.image-container img {
+  width: 60%; /* Adjust image width */
+  height: auto;
+  margin-bottom: 10px; /* Adjust spacing between image and text */
+}
+
+.menu a {
+  text-align: center;
+  text-decoration: none;
+  color: black;
+}
+
+.menu img {
+  width: 50%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
+
+.menu img:hover {
+cursor: url('./WFABH\ hand\ cursor.png'), auto; /* Set cursor globally */
+color: rgb(135, 118, 91);
+}
+
+
+.menu p:hover {
+  cursor: url('./WFABH\ hand\ cursor.png'), auto; /* Set cursor globally */
+  }
+
+#submissionBox {
+  align-items: left;
+  width: 100%;
+  margin-top: 0%;
+  padding-right: 2.5vw;
+}
+
+#nameInput {
+  height: 50%;
+  width: 10vw;
+  left: 0;
+  padding-left: 3%;
+  padding-right: 3%;
+  padding-bottom: 2%;
+  padding-top: 2%;
+  border-radius: 13px;
+  font-family: "IBM Plex Mono", monospace;
+  font-weight: 400;
+  margin-left: -0.3vw;
+  font-size: 0.9vw;
+  border-width: 0.15vw;
+  margin-right: 1.5%;
+}
+
+button {
+  padding-top: 2%;
+  padding-bottom: 2%;
+  padding-left: 5%;
+  padding-right: 5%;
+  height: 100%;
+  background-color: #000000;
+  color: white;
+  border: none;
+  border-radius: 15px;
+  cursor: pointer;
+  font-family: "IBM Plex Mono", monospace;
+  font-weight: 600;
+  font-size: 0.85vw;
+}
+
+p {
+  font-family: "IBM Plex Mono", monospace;
+  font-weight: 400;
+  font-size: 1em;
+  white-space: pre-wrap;
+}
+
+a {
+  text-decoration: none;
+}
+
+a:hover {
+  font-style: bolder;
+  font-weight: 700;
+  color: rgb(135, 118, 91);
+  font-style: italic;
+  cursor: url('./WFABH\ hand\ cursor.png'), auto; /* Set cursor globally */
+}
+
+.popup {
+  display: none; /* Initially hide the popup */
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-image: url(./paper\ texture.jpg);
+  background-size: cover;
+  padding: 20px;
+  border: 1px solid #ccc;
+  z-index: 2;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+  border-radius: 10px;
+  animation: slideForward 0.3s forwards; /* Apply slide forward animation */
+  font-size: 1.5vw;
+  max-height: 70%;
+}
+
+#cafecontent {
+  overflow-y: scroll;
+  max-height: 71vh;
+}
+
+@keyframes slideForward {
+  from {
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(0.8); /* Start from smaller size */
+  }
+  to {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1); /* Scale to original size */
+  }
+}
+.close-btn {
+  position: fixed;
+  z-index: 1000;
+  top: 2vh;
+  right: 0;
+  cursor: url('./WFABH\ hand\ cursor.png'), auto; /* Set cursor globally */
+  padding: 2%;
+  width: 2.5vw;
+  color: rgb(0, 0, 0,0.8);
+  transition: transform 0.3s ease-in-out; /* Smooth transition for rotation and scaling */
+}
+
+.close-btn:hover {
+  opacity: 1;
+  transform: rotate(90deg) scale(1.5);
+}
+
+ ol {
+  margin-top: 0%;
+  list-style: circle;
+  padding-left: 5%;
+  padding-bottom: 0%;
+  margin-bottom: 0%;
+}
+
+li p{
+  padding-top: 0%;
+  padding-bottom: 0%;
+  margin-bottom: 0%;
+  line-height: 0.1;
+  font-size: 69%;
+}
+
+li {
+  padding-top: 0%;
+  width: 100%;
+  padding-bottom: 0%;
+  margin-left: 8%;
+}
+
+.number-container {
+  display: flex;
+  align-items: left;
+  margin-bottom: 0%;
+  padding-bottom: 0%;
+  margin-left: 50%; 
+  margin-right: 10%; 
+  margin-top: 5%;
+  width: 30%;
+  transform: translateY(-5vh)
+}
+
+
+.number-container button {
+  margin-left: 2%;
+  margin-right: 2%;
+  margin-top:0%;
+  margin-bottom: 0%;
+  width: 3vw;
+  padding: 0%;
+  height: 1vh;
+  background-color: rgb(0, 0, 0,0);
+  border: none;
+  border-radius: 15px;
+  font-family: "IBM Plex Mono", monospace;
+  font-weight: 400;
+  cursor: url('./WFABH\ hand\ cursor.png'), auto; /* Set cursor globally */
+}
+
+#number {
+  margin-right: 2%;
+  transform: translateY(-10%);
+  font-family: "IBM Plex Mono", monospace;
+  font-weight: 600;
+  white-space: pre-wrap;
+}
+
+#datetime {
+  margin-top: 75%;
+  width: 100%;
+  margin-left: 0%;
+  padding-left: 0%;
+  align-content: center;
+  text-align: center;
+}
+
+.notes {
+  display: flex;
+  font-size: 60%;
+}
+
+#checklist {
+  display: flex;
+  flex-direction: row; /* Ensure the child divs are in a row */
+  width: 70%; /* Adjust the width as necessary */
+}
+
+#yes, #no {
+  width: 100%; /* Adjust the width as necessary */
+}
+
+#notesfr{
+  width: 60%;
+  margin-top: 0%;
+  padding-right: 1%;
+  flex-direction: column;
+}
+
+#mapFrame {
+  margin-left: 2%;
+  margin-bottom: 3%;
+}
+
+.logos img{
+    width: 30%
+  }
+
+  .notes p{
+    margin-top: -1%
+  }
+
+  .thanks {
+    margin-top: -15%;
+  }
+
+  #plantshedlogo img{
+    width: 40%;
+  }
+#plantshed img {
+  width: 55%;
+}
+#libraelogo img {
+    width: 40%;
+  }
+#librae img {
+  width: 45%
+}
+  #konalogo img {
+    width: 50%;
+  }
+  #threejewelslogo img {
+    width: 30%;
+  }
+  #threejewels img {
+    width: 60%
+  }
+  #remi43logo img {
+    width: 20%;
+  }
+  #remi43 img {
+    width: 65%
+  }
+  #devocionlogo img {
+    width: 40%;
+  }
+  #devocion img {
+    width: 75%
+  }
+  #usagilogo img {
+    width: 40%;
+  }
+  #laobralogo img {
+    width: 40%;
+  }
+  #laobra img {
+    width: 60%
+  }
+  #seveneightlogo img {
+    width: 25%;
+  }
+  #bibliologo img {
+    width: 30%
+  }
+  #bibliotheque img {
+    width: 60%
+  }
+  #partnerslogo img {
+    width: 40%;
+  }
+  #aristonlogo img {
+    width: 50%;
+  }
+  #ariston img {
+    width: 80%
+  }
+  #bluebottlelogo img {
+    width: 20%
+  }
+  #bluebottle img {
+    width: 60%
+  }
+  #hungryghost img {
+    width: 60%
+  }
+  #sammylicon img {
+    width: 63%;
+  }
+  #sammyllogo img {
+    width: 30%;
+  }
+  #conwellicon img {
+    width: 60%;
+  }
+  #conwelllogo img {
+    width: 30%;
+  }
+  #gathericon img {
+    width: 65%;
+  }
+  #gatherlogo img {
+    width: 45%;
+    margin-top: -3%;
+  }
+  #outroicon img {
+    width: 65%;
+  }
+  #outrologo img {
+    width: 50%;
+    margin: 0%;
+  }
+  #bluestripesicon img{
+    width: 70%;
+    margin-bottom: 13%;
+  }
+  #bluestripeslogo img{
+    width: 60%;
+  }
+  #process {
+    border-color: #5A3418;
+    border-width: 2px;
+    border-radius: 10px
+  }
+  #photos {
+    display: flex;
+    flex-direction: row;
+  }
+#slideshow {
+  position: relative;
+  width: 100%;
+  margin: auto;
+  overflow: hidden;
+  display: flex;
+  flex-direction: row;
+}
+  #slideshow img {
+    width: 82%;
+    height: 85%;
+    border-radius: 10px;
+    padding: 1%;
+  }
+  .prev, .next {
+    cursor: pointer;
+    padding: 2%;
+    position: absolute;
+    font-weight: bold;
+    font-size: 2vw;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+    z-index: 1000;
+    top: 35%;
+  }
+  .prev {
+    left: 0;
+    border-radius: 3px 0 0 4px;
+    transform: translateX(21vw)
+  }
+  
+  .next {
+    right: 0;
+    margin-right: 3%;
+    border-radius: 3px 4px 0 0;
+    transform: translateX(1.3vw)
+  }
+  .prev .next :hover{
+    font-style: none;
+    color:rgb(135, 118, 91);
+  }
+  .search-container {
+    padding-left: 2%;
+    width: 100%;
+    position: absolute;
+    z-index: 1000;
+  }
+  #search-bar {
+    width: 25%;
+    padding: 0.4% 0.5%;
+    font-size: 0.9em;
+    border: 2px solid rgb(135, 118, 91);
+    border-radius: 20px;
+    margin-left: 60%;
+    z-index: 100;
+    margin-top: 2%;
+    font-style: italic;
+    font-family: "IBM Plex Mono", monospace;
+    margin-right: 0.8%;
+    background-color: #00000000;
+  }
+  #search-bar:focus {
+    outline: none;
+    border-color: rgb(135, 118, 91);
+    box-shadow: 0 0 10px rgb(135, 118, 91);
+    background-color: rgb(232, 229, 210);
+  }
+
+  #search-button {
+    padding: 0.5% 1.3%;
+    font-size: 0.9EM;
+    border-radius: 20px;
+    background-color: rgb(135, 118, 91);
+    color: white;
+  }
+  #search-button:hover{
+    transform: scale(110%);
+  }
+  #search-button:active{
+    outline: none;
+    color: rgb(135, 118, 91);
+    background-color: white;
+  }
+  .filter-container {
+    padding: 20px;
+    text-align: center;
+    position: absolute; /* Fixed position to stay at the top */
+    top: 0;
+    left: 35%;
+    transform: translateX(-30%); /* Center horizontally */
+    width: 40%; /* Full width */
+    z-index: 1002; /* Ensure it's on top of other elements */
+    display: flex;
+    flex-direction: row;
+    margin-top: 0.1%;
+  }
+  
+  #tag-filter {
+    width: 30%;
+    margin-top: 0.5%;
+  }
+
+#tag-filter-toggle, #location-filter-toggle{
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 0%;
+}
+
+#location-filter {
+    margin-top: 0.5%;
+    width: 35%;
+  }
+  .multi-select {
+    height: auto;
+    font-size: 0.8em;
+    border: 2px solid rgb(135, 118, 91);
+    border-radius: 10px;
+    cursor: pointer;
+    font-family: "IBM Plex Mono", monospace;
+    font-weight: 400;
+    background-color: transparent; /* Set background color to transparent */
+    text-align: left;
+    overflow-y: scroll;
+    padding: 7%;
+    background-color: rgb(232, 229, 210);
+  }
+  
+  /* Style the label and ensure it's clickable */
+  .multi-select label {
+    display: inline-flex; /* Ensure each label is a block element */
+  }
+  
+  /* Style for checked state */
+  .multi-select input[type="checkbox"]:checked + label{
+    background-color: #654321; /* Brown background color when checked */
+  }
+  
+  /* Optional: Style the check mark inside the checkbox */
+  .multi-select input[type="checkbox"]:checked + label::before::after {
+    content: "\2713"; /* Unicode check mark character */
+    display: block;
+    text-align: center;
+    line-height: 16px;
+    color: #fff; /* White color for check mark */
+  }
+  
+  h3 {
+  font-family: "IBM Plex Mono", monospace;
+  font-weight: 700;
+  white-space: pre-wrap;
+  font-size: 1em;
+  color:rgb(135, 118, 91)
+}
+#filter-button {
+  padding: 1% 3%;
+  font-size: 0.9EM;
+  border-radius: 20px;
+  background-color: rgb(135, 118, 91);
+  color: white;
+  margin-top: 2%;
+  margin-left: 3%;
+}
+
+.toggle-button {
+  display: inline-block;
+  cursor: pointer;
+  font-size: 2.5em;
+  font-weight: 400;
+  color: rgb(135, 118, 91);
+  margin-right: 5%;
+  padding-top: 2%;
+  transition: transform 0.3s ease; /* Smooth transition for rotation */
+}
+
+.toggle-button span {
+  display: inline-block; /* Ensures span behaves like an inline element */
+  transition: transform 0.3s ease; /* Smooth transition for rotation */
+}
+
+.filter-section {
+  display: none;
+}
+
+.filter-section.active {
+  display: block;
+}}
