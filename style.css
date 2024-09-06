@@ -82,7 +82,7 @@ color: rgb(135, 118, 91);
 
   .receipt {
     width: 60vw; /* Adjust the width to 90% of the viewport width */
-    height: 85%;
+    height: 80%;
     left: 18vw;
     position: absolute;
     background-image: url(./receipt\ w\ graphics\ mobile.png);
