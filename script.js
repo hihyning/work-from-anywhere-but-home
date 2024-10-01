@@ -39,7 +39,7 @@ document.getElementById('count').innerText = count;
 localStorage.setItem('visitCount', count);
 // Function to show the popup
 function showPopup(id) {
-  let numberOfPopups = 15;
+  let numberOfPopups = 20;
   for (let i = 1; i <= numberOfPopups; i ++){
     var currentPopup = document.getElementById("popup" + i);
     console.log("popup" + i);
