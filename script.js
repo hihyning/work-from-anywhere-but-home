@@ -502,7 +502,7 @@ function changeSlide15(n) {
 //end
 
 let slide16Index = 0;
-let slide16Src = ["./sammyl/sammyl1.jpg", "./sammyl/sammyl2.jpg", "./sammyl/sammyl3.jpg"];
+let slide16Src = ["./sammyl/sammyl1.JPG", "./sammyl/sammyl2.JPG", "./sammyl/sammyl3.JPG"];
 showSlide16(slide16Index);
 
 function showSlide16(index) {
