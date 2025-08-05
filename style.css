@@ -10,6 +10,34 @@ body {
   overflow-x: none;
 }
 
+.image-container p {
+  font-size: 90%;
+  font-weight: 600;
+  text-align: center;
+  margin-bottom: 1%;
+  line-height: 1;
+}
+
+.image-container h2 {
+  margin-top: 1%;
+  font-size: 80%;
+  font-weight: 400;
+  text-align: center;
+  letter-spacing: -0.02em;
+  font-family: "IBM Plex Mono", monospace;
+}
+
+.introtext p{
+  font-size: 0.8em !important;
+  letter-spacing: 0.02em !important;
+  line-height: 120% !important;
+}
+
+.thanks {
+  line-height: 80%;
+  width: auto;
+}
+
 @media only screen and (max-width: 768px) {
   .image-container {
     margin-left: 20%;
@@ -51,12 +79,14 @@ body {
     display: grid;
     grid-template-rows: auto auto;
     justify-items: center;
+    align-items: center;
+    place-items: center;
     padding-left: 2%;
     padding-right: 2%;
   }
   
   .image-container img {
-    min-width: 60%;
+    width: 70% !important;
     height: auto;
     margin-bottom: 10px;
     margin-left: 2%;
@@ -117,10 +147,6 @@ color: rgb(135, 118, 91);
   width: 68vw;
 }
 
-.receipttext p {
-  font-size: 100%;
-}
-
 #submissionBox {
   align-items: left;
   width: 110%;
@@ -172,7 +198,6 @@ button {
 
 p {
   font-family: "IBM Plex Mono", monospace;
-  font-weight: 400;
   white-space: pre-wrap;
 }
 
@@ -230,12 +255,6 @@ a:hover {
 
 .notes p{
   margin-top: 7%
-}
-
-.thanks {
-  margin-top: -22%;
-  width: 72vw;
-  font-size: 130%;
 }
 
 .close-btn {
@@ -441,10 +460,44 @@ li {
 
 #hungryghosticon img {
   width: 110%;
-  transform: translateX(-3vw)
+  transform: translateX(-3vw);
 }
 #hungryghostlogo img {
   width: 80%;
+}
+
+#sammyllogo img {
+  width: 30%;
+}
+#conwellicon img {
+  width: 110%;
+  transform: translatey(-1vh);
+}
+#conwelllogo img {
+  width:30%;
+}
+#gathericon img {
+  width: 110%;
+}
+#gatherlogo img {
+  width: 60%;
+  margin-top: -1%;
+}
+#outroicon img {
+  width: 110%;
+  transform: translateX(-2%)
+}
+#outrologo img {
+  width: 70%;
+  margin: 0%;
+}
+#bluestripesicon img{
+  width: 110%;
+  margin-bottom: 30%;
+  transform: translateX(-6%)
+}
+#bluestripeslogo img{
+  width: 100%;
 }
 #photos {
   display: flex;
@@ -670,13 +723,15 @@ display: block;
   .menu {
     display: grid;
     grid-template-columns: repeat(5, 0.2fr);
-    grid-template-rows: repeat(3, 0.2fr);
-    grid-gap: 0px;
+    grid-template-rows: repeat(auto, 0.2fr);
+    grid-gap: 1em;
     justify-content: center;
     align-items: center;
     margin-top: 7%;
     margin-right: 2%;
     margin-left: 3%;
+    margin-bottom: 5%;
+    padding-bottom: 5%;
     background-size: cover;
     background-repeat: no-repeat;
     width: 75vw;
@@ -686,19 +741,20 @@ display: block;
     z-index: 1;
     position: absolute
   }
+  
   .receipt {
     position: fixed;
     top: 0%;
     left: 0;
-    width: 19vw;
+    width: 20vw;
     height: 100vh;
     background-image: url(./receipt\ w\ graphics.png);
     background-repeat: no-repeat;
     background-size: contain;
     padding-left: 2%;
-    padding-right: 0%;
+    padding-right: 2%;
     margin-left: 1%;
-    margin-top: 0%;
+    margin-top: 1%;
     display: flex;
     flex-direction: column;
     align-items: left;
@@ -707,10 +763,11 @@ display: block;
   }
   .receipttext {
     padding-left: 5%;
-    font-size: 90%;
+    font-size: 1em;
   }
   .introtext{
     padding-left: 1%;
+    padding-right: 1%;
   }
   
   @keyframes slideDown {
@@ -728,11 +785,13 @@ display: block;
   display: grid;
   grid-template-rows: auto auto; /* Set grid rows for image and text */
   justify-items: center; /* Center items horizontally */
+  align-items: center;
+  place-items: center;
   right: 0;
 }
 
 .image-container img {
-  width: 60%; /* Adjust image width */
+  width: 70%; /* Standardize all image-container images */
   height: auto;
   margin-bottom: 10px; /* Adjust spacing between image and text */
 }
@@ -973,10 +1032,6 @@ li {
     margin-top: -1%
   }
 
-  .thanks {
-    margin-top: -15%;
-  }
-
   #plantshedlogo img{
     width: 40%;
   }
@@ -1045,6 +1100,80 @@ li {
   }
   #hungryghost img {
     width: 60%
+  }
+  #sammyl img {
+    width: 60%;
+  }
+  #sammyllogo img {
+    width: 30%;
+  }
+  #conwell img {
+    width: 55%;
+  }
+  #conwelllogo img {
+    width: 30%;
+  }
+  #gather img {
+    width: 60%;
+  }
+  #gatherlogo img {
+    width: 45%;
+    margin-top: -3%;
+  }
+  #outro img {
+    width: 65%;
+  }
+  #outrologo img {
+    width: 50%;
+    margin: 0%;
+  }
+  #bluestripes img{
+    width: 70%;
+    margin-bottom: 13%;
+  }
+  #bluestripeslogo img{
+    width: 60%;
+  }
+  #threeleggedcat img{
+    width: 50%;
+    margin-bottom: 13%;
+  }
+  #threeleggedcatlogo img{
+    width: 25%;
+  }
+  #bunnybro img{
+    width: 45%;
+    margin-bottom: 13%;
+  }
+  #bunnybrologo img{
+    width: 35%;
+  }
+   #thebean img{
+    width: 60%;
+    margin-bottom: 13%;
+  }
+  #thebeanlogo img{
+    width: 25%;
+  }
+  #sullaluna img{
+    width: 60%;
+    margin-bottom: 13%;
+  }
+  #sullalunalogo img{
+    width: 25%;
+  }
+  #gotan img{
+    width: 65%;
+    margin-bottom: 13%;
+  }
+  #gotanlogo img{
+    width: 25%;
+  }
+
+  #process {
+    border-color: #5A3418;
+    border-width: 2px;
+    border-radius: 10px
   }
   #photos {
     display: flex;
@@ -1142,7 +1271,7 @@ li {
     left: 35%;
     transform: translateX(-30%); /* Center horizontally */
     width: 40%; /* Full width */
-    z-index: 1000; /* Ensure it's on top of other elements */
+    z-index: 1002; /* Ensure it's on top of other elements */
     display: flex;
     flex-direction: row;
     margin-top: 0.1%;

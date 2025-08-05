@@ -1,3 +1,18 @@
+// Function to count cafe divs and update intro text
+function updateCafeCount() {
+  const cafeDivs = document.querySelectorAll('.image-container');
+  const cafeCount = cafeDivs.length;
+  
+  // Update the intro text with the dynamic count
+  const introText = document.querySelector('.introtext p');
+  if (introText) {
+    introText.innerHTML = `Do you also like to<span style="font-size: 1em; text-align: center; font-weight: 600;"><br>WORK FROM ANYWHERE BUT HOME?<br></span>Here you can find a selection of <strong>${cafeCount}</strong> NYC spaces where you can do just that. Click through for all the details you need to know before you go. Personally curated by me, based on real visits.<br>~ HYNING <a style="font-style: italic" href="https://www.instagram.com/hihyning/">(@hihyning)</a><br><br>Know a place I missed?<br>Submit it here.`;
+  }
+}
+
+// Call the function when the page loads
+document.addEventListener('DOMContentLoaded', updateCafeCount);
+
 function submitName() {
     var name = document.getElementById('nameInput').value;
     document.getElementById('submissionBox').innerHTML = "<p>CUSTOMER: " + name + "</p>";
@@ -39,7 +54,7 @@ document.getElementById('count').innerText = count;
 localStorage.setItem('visitCount', count);
 // Function to show the popup
 function showPopup(id) {
-  let numberOfPopups = 15;
+  let numberOfPopups = 25;
   for (let i = 1; i <= numberOfPopups; i ++){
     var currentPopup = document.getElementById("popup" + i);
     console.log("popup" + i);
@@ -501,3 +516,122 @@ function changeSlide15(n) {
 
 //end
 
+let slide16Index = 0;
+let slide16Src = ["./sammyl/sammyl1.jpg", "./sammyl/sammyl2.jpg", "./sammyl/sammyl3.jpg"];
+showSlide16(slide16Index);
+
+function showSlide16(index) {
+  const slide = document.getElementById('slide16');
+  slide.src = slide16Src[index];
+}
+
+function changeSlide16(n) {
+  const slide = document.getElementById('slide16');
+  slide16Index = (slide16Index + n + 3) % 3;
+  slide.src = slide16Src[slide16Index];
+  console.log(slide.src);
+  showSlide16(slide16Index);
+  console.log("change");
+}
+
+//end
+
+let slide17Index = 0;
+let slide17Src = ["./conwell/conwell1.jpg", "./conwell/conwell2.jpg", "./conwell/conwell3.jpg"];
+showSlide17(slide17Index);
+
+function showSlide17(index) {
+  const slide = document.getElementById('slide17');
+  slide.src = slide17Src[index];
+}
+
+function changeSlide17(n) {
+  const slide = document.getElementById('slide17');
+  slide17Index = (slide17Index + n + 3) % 3;
+  slide.src = slide17Src[slide17Index];
+  console.log(slide.src);
+  showSlide17(slide17Index);
+  console.log("change");
+}
+
+//end
+
+let slide18Index = 0;
+let slide18Src = ["./gather/gather1.jpg", "./gather/gather2.png", "./gather/gather3.png"];
+showSlide18(slide18Index);
+
+function showSlide18(index) {
+  const slide = document.getElementById('slide18');
+  slide.src = slide18Src[index];
+}
+
+function changeSlide18(n) {
+  const slide = document.getElementById('slide18');
+  slide18Index = (slide18Index + n + 3) % 3;
+  slide.src = slide18Src[slide18Index];
+  console.log(slide.src);
+  showSlide18(slide18Index);
+  console.log("change");
+}
+
+//end
+
+let slide19Index = 0;
+let slide19Src = ["./outro/outro1.jpg", "./outro/outro2.jpg", "./outro/outro3.jpg"];
+showSlide19(slide19Index);
+
+function showSlide19(index) {
+  const slide = document.getElementById('slide19');
+  slide.src = slide19Src[index];
+}
+
+function changeSlide19(n) {
+  const slide = document.getElementById('slide19');
+  slide19Index = (slide19Index + n + 3) % 3;
+  slide.src = slide19Src[slide19Index];
+  console.log(slide.src);
+  showSlide19(slide19Index);
+  console.log("change");
+}
+
+//end
+
+let slide20Index = 0;
+let slide20Src = ["./blue stripes/blue stripes1.jpg", "./blue stripes/blue stripes2.jpg", "./blue stripes/blue stripes3.jpg"];
+showSlide20(slide20Index);
+
+function showSlide20(index) {
+  const slide = document.getElementById('slide20');
+  slide.src = slide20Src[index];
+}
+
+function changeSlide20(n) {
+  const slide = document.getElementById('slide20');
+  slide20Index = (slide20Index + n + 3) % 3;
+  slide.src = slide20Src[slide20Index];
+  console.log(slide.src);
+  showSlide20(slide20Index);
+  console.log("change");
+}
+
+//end
+
+let slide21Index = 0;
+let slide21Src = ["./three legged cat/threeleggedcat1.jpg", "./three legged cat/threeleggedcat2.jpg", "./three legged cat/threeleggedcat3.jpg"];
+showSlide21(slide21Index);
+
+function showSlide21(index) {
+  const slide = document.getElementById('slide21');
+  slide.src = slide21Src[index];
+}
+
+function changeSlide21(n) {
+  const slide = document.getElementById('slide21');
+  slide21Index = (slide21Index + n + 3) % 3;
+  slide.src = slide21Src[slide21Index];
+  console.log(slide.src);
+  showSlide21(slide21Index);
+  console.log("change");
+}
+
+//end

@@ -283,5 +283,119 @@
             "sofa":"false",
             "wow": "false"
         }
+    },
+    {
+        "name": "Sammy L Coffee",
+        "div_id": "sammyl",
+        "popup_id": "popup16",
+        "location": ["manhattan"],
+        "tags": {
+            "wifi": "true",
+            "washroom": "true",
+            "sweet treats": "true",
+            "photo worthy":"true",
+            "specialty":"true",
+            "open past 6":"true",
+            "outlets":"true",
+            "quiet":"true",
+            "meals":"true",
+            "sofa":"false",
+            "wow": "true"
+        }
+    },
+    {
+        "name": "Conwell Coffee Hall",
+        "div_id": "conwell",
+        "popup_id": "popup17",
+        "location": ["manhattan"],
+        "tags": {
+            "wifi": "true",
+            "washroom": "true",
+            "sweet treats": "true",
+            "photo worthy":"true",
+            "specialty":"true",
+            "open past 6":"true",
+            "outlets":"true",
+            "quiet":"true",
+            "meals":"true",
+            "sofa":"true",
+            "wow": "true"
+        }
+    },
+    {
+        "name": "Gather",
+        "div_id": "gather",
+        "popup_id": "popup18",
+        "location": ["manhattan"],
+        "tags": {
+            "wifi": "true",
+            "washroom": "true",
+            "sweet treats": "true",
+            "photo worthy":"true",
+            "specialty":"true",
+            "open past 6":"true",
+            "outlets":"true",
+            "quiet":"true",
+            "meals":"true",
+            "sofa":"false",
+            "wow": "true"
+        }
+    },
+    {
+        "name": "Outro",
+        "div_id": "outro",
+        "popup_id": "popup19",
+        "location": ["manhattan"],
+        "tags": {
+            "wifi": "true",
+            "washroom": "true",
+            "sweet treats": "true",
+            "photo worthy":"true",
+            "specialty":"true",
+            "open past 6":"true",
+            "outlets":"true",
+            "quiet":"true",
+            "meals":"true",
+            "sofa":"true",
+            "wow": "false"
+        }
+    },
+    {
+        "name": "Blue Stripes",
+        "div_id": "bluestripes",
+        "popup_id": "popup20",
+        "location": ["manhattan"],
+        "tags": {
+            "wifi": "true",
+            "washroom": "true",
+            "sweet treats": "true",
+            "photo worthy":"false",
+            "specialty":"true",
+            "open past 6":"true",
+            "outlets":"true",
+            "quiet":"false",
+            "meals":"true",
+            "sofa":"false",
+            "wow": "false"
+        }
+    },
+    {
+        "name": "Three Legged Cat",
+        "div_id": "threeleggedcat",
+        "popup_id": "popup21",
+        "location": ["brooklyn"],
+        "tags": {
+            "wifi": "true",
+            "washroom": "true",
+            "sweet treats": "true",
+            "photo worthy":"true",
+            "specialty":"false",
+            "open past 6":"false",
+            "outlets":"true",
+            "quiet":"true",
+            "meals":"false",
+            "sofa":"true",
+            "wow": "false"
+        }
     }
 ]
