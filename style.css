@@ -64,6 +64,20 @@ body {
     margin-top: 97vh;
   }
   
+  .todo-item{
+    margin-bottom: 0% !important;
+    margin-top: 0% !important;
+    width: 70% !important;
+    padding-bottom: 0% !important;
+    padding-top: 0% !important;
+  } 
+
+  .todo-item input[type="text"]{
+    margin-bottom: 0% !important;
+    padding: 0;
+
+  }
+
   @keyframes slideDownMenu {
     from {
       top: -100%;
@@ -130,7 +144,7 @@ color: rgb(135, 118, 91);
   }
 
   .receipttext {
-    width: 70%;
+    width: 65%;
   }
 
   .introtext {
@@ -1400,6 +1414,7 @@ li {
 .filter-section.active {
   display: block;
 }
+}
 
 .todo-item{
   font-size: 0.75em;
@@ -1407,6 +1422,8 @@ li {
   font-weight: 400;
   width: 85%;
   letter-spacing: -0.05em;
+  margin-bottom: 0%;
+  margin-top: 0%;
 
 }
 .todo-item input[type="text"]{
@@ -1417,5 +1434,4 @@ li {
 }
 .todo-item :active[type="text"]{
   color: rgb(135, 118, 91);
-}
 }
