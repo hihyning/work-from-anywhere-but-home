@@ -24,7 +24,10 @@ function updateDateTime() {
   var dateTimeString = currentDate.toLocaleString();
 
   // Display the formatted date and time in the 'datetime' element
-  document.getElementById('datetime').textContent = dateTimeString ;
+  const datetimeElement = document.getElementById('datetime');
+  if (datetimeElement) {
+    datetimeElement.textContent = dateTimeString;
+  }
 }
 
 // Call the function initially to display the current date and time
@@ -32,42 +35,55 @@ updateDateTime();
 
 // Update the date and time every second
 setInterval(updateDateTime, 1000);
+
 // Check if the count is stored in localStorage
-if (localStorage.getItem('visitCount')) {
-  // If count exists, get it from localStorage and display it
-  var count = parseInt(localStorage.getItem('visitCount'));
-  document.getElementById('count').innerText = count;
-} else {
-  // If count doesn't exist, initialize it to 1 and display it
-  var count = 1;
-  document.getElementById('count').innerText = count;
+const countElement = document.getElementById('count');
+if (countElement) {
+  if (localStorage.getItem('visitCount')) {
+    // If count exists, get it from localStorage and display it
+    var count = parseInt(localStorage.getItem('visitCount'));
+    countElement.innerText = count;
+  } else {
+    // If count doesn't exist, initialize it to 1 and display it
+    var count = 1;
+    countElement.innerText = count;
+  }
+
+  // Increment the count and update the display
+  count++;
+  countElement.innerText = count;
+
+  // Store the updated count in localStorage
+  localStorage.setItem('visitCount', count);
 }
 
-// Increment the count and update the display
-count++;
-document.getElementById('count').innerText = count;
-
-// Store the updated count in localStorage
-localStorage.setItem('visitCount', count);
 // Function to show the popup
 function showPopup(id) {
   let numberOfPopups = 25;
   for (let i = 1; i <= numberOfPopups; i ++){
     var currentPopup = document.getElementById("popup" + i);
-    console.log("popup" + i);
-    currentPopup.style.display = "none"; // Hide the popup
+    if (currentPopup) {
+      console.log("popup" + i);
+      currentPopup.style.display = "none"; // Hide the popup
+    }
   }
   var popup = document.getElementById(id);
-  popup.style.display = "block"; // Show the popup
+  if (popup) {
+    popup.style.display = "block"; // Show the popup
+  }
 }
 // Function to hide the popup
 function hidePopup(id) {
   var popup = document.getElementById(id);
-  popup.style.display = "none"; // Hide the popup
+  if (popup) {
+    popup.style.display = "none"; // Hide the popup
+  }
 }
 
 function addToOrder(itemName) {
   var orderList = document.getElementById('orderItems');
+  if (!orderList) return;
+  
   var listItem = document.createElement('li');
 
   if (orderList.children.length >= 3) {
@@ -89,20 +105,22 @@ const decrementBtn = document.getElementById('decrement');
 const incrementBtn = document.getElementById('increment');
 const numberText = document.getElementById('number');
 
-// Add event listeners for buttons
-decrementBtn.addEventListener('click', () => {
-  // Parse the current number text to an integer and decrement by 1
-  let currentValue = parseInt(numberText.textContent);
-  if (currentValue > 0) {
-    numberText.textContent = currentValue - 1;
-  }
-});
+// Add event listeners for buttons only if they exist
+if (decrementBtn && incrementBtn && numberText) {
+  decrementBtn.addEventListener('click', () => {
+    // Parse the current number text to an integer and decrement by 1
+    let currentValue = parseInt(numberText.textContent);
+    if (currentValue > 0) {
+      numberText.textContent = currentValue - 1;
+    }
+  });
 
-incrementBtn.addEventListener('click', () => {
-  // Parse the current number text to an integer and increment by 1
-  let currentValue = parseInt(numberText.textContent);
-  numberText.textContent = currentValue + 1;
-});
+  incrementBtn.addEventListener('click', () => {
+    // Parse the current number text to an integer and increment by 1
+    let currentValue = parseInt(numberText.textContent);
+    numberText.textContent = currentValue + 1;
+  });
+}
 
 // Fetching JSON
 let cafe_data;
@@ -116,18 +134,28 @@ fetch('./tags.json')
 function search() {
   const searchBar = document.getElementById('search-bar');
   const searchBarInput = searchBar.value.toLowerCase();
+  
+  // Check if cafe_data is loaded
+  if (!cafe_data) {
+    console.log('Cafe data not loaded yet');
+    return;
+  }
+  
+  // First, show all cafes
   for (const cafe of cafe_data) {
-    console.log(cafe);
-    if(cafe.name.toLowerCase().includes(searchBarInput))  {
-      document.getElementById(cafe.div_id).style.display = "block";
-
-      for (const cafe of cafe_data) {
-        console.log(cafe);
-        if(!cafe.name.toLowerCase().includes(searchBarInput))  {
-          document.getElementById(cafe.div_id).style.display = "none";
-      
-      }
+    const cafeElement = document.getElementById(cafe.div_id);
+    if (cafeElement) {
+      cafeElement.style.display = "block";
     }
+  }
+  
+  // Then hide cafes that don't match the search
+  if (searchBarInput !== "") {
+    for (const cafe of cafe_data) {
+      const cafeElement = document.getElementById(cafe.div_id);
+      if (cafeElement && !cafe.name.toLowerCase().includes(searchBarInput)) {
+        cafeElement.style.display = "none";
+      }
     }
   }
 }
@@ -135,7 +163,7 @@ function search() {
 function checkTextInputEmpty() {
   const searchBar = document.getElementById('search-bar');
   const searchBarInput = searchBar.value.toLowerCase();
-  if (searchBarInput === "") {
+  if (searchBarInput === "" && cafe_data) {
     search();
   }
 }
@@ -148,6 +176,12 @@ document.getElementById('search-bar').addEventListener('keydown', function(event
 
 // Filtering Functions
 function getSelectedOptions() {
+  // Check if cafe_data is loaded
+  if (!cafe_data) {
+    console.log('Cafe data not loaded yet');
+    return;
+  }
+
   // Get all checkboxes with name="features"
   const tagCheckboxes = document.querySelectorAll('input[name="tags"]:checked');
   const locationCheckboxes = document.querySelectorAll('input[name="locations"]:checked');
@@ -168,20 +202,27 @@ function getSelectedOptions() {
     
   if (selectedTags.length !== 0 || selectedLocations.length !== 0) {
     for (const cafe of cafe_data) { 
-      document.getElementById(cafe.div_id).style.display = "none";
+      const cafeElement = document.getElementById(cafe.div_id);
+      if (cafeElement) {
+        cafeElement.style.display = "none";
+      }
     }
     for (const cafe of cafe_data) {
       let meetsAllTags = selectedTags.length == 0 || selectedTags.every(tag => cafe.tags[tag] === "true");
       let meetsLocation = selectedLocations.length === 0 || selectedLocations.some(location => cafe.location.includes(location));
       
-      if (meetsAllTags && meetsLocation) {
-          document.getElementById(cafe.div_id).style.display = "block";
+      const cafeElement = document.getElementById(cafe.div_id);
+      if (cafeElement && meetsAllTags && meetsLocation) {
+          cafeElement.style.display = "block";
       }
   }
   }
   else {
     for (const cafe of cafe_data) { 
-      document.getElementById(cafe.div_id).style.display = "block";
+      const cafeElement = document.getElementById(cafe.div_id);
+      if (cafeElement) {
+        cafeElement.style.display = "block";
+      }
     }
   }
 }
@@ -223,16 +264,20 @@ showSlide(slideIndex);
 
 function showSlide(index) {
   const slide = document.getElementById('slide');
-  slide.src = slideSrc[index];
+  if (slide) {
+    slide.src = slideSrc[index];
+  }
 }
 
 function changeSlide(n) {
   const slide = document.getElementById('slide');
-  slideIndex = (slideIndex + n + 3) % 3;
-  slide.src = slideSrc[slideIndex];
-  console.log(slide.src);
-  showSlide(slideIndex);
-  console.log("change")
+  if (slide) {
+    slideIndex = (slideIndex + n + 3) % 3;
+    slide.src = slideSrc[slideIndex];
+    console.log(slide.src);
+    showSlide(slideIndex);
+    console.log("change");
+  }
 }
 
 // end 
@@ -301,11 +346,12 @@ function changeSlide4(n) {
 
 let slide5Index = 0;
 let slide5Src = ["./threejewels/threejewels1.png", "./threejewels/threejewels2.png", "./threejewels/threejewels3.png"];
-showSlide5(slide5Index);
 
 function showSlide5(index) {
   const slide = document.getElementById('slide5');
-  slide.src = slide5Src[index];
+  if (slide) {
+    slide.src = slide5Src[index];
+  }
 }
 
 function changeSlide5(n) {
@@ -522,7 +568,7 @@ function changeSlide15(n) {
 //end
 
 let slide16Index = 0;
-let slide16Src = ["./sammyl/sammyl1.jpg", "./sammyl/sammyl2.jpg", "./sammyl/sammyl3.jpg"];
+let slide16Src = ["./sammyl/sammyl1.JPG", "./sammyl/sammyl2.JPG", "./sammyl/sammyl3.JPG"];
 showSlide16(slide16Index);
 
 function showSlide16(index) {
@@ -637,6 +683,102 @@ function changeSlide21(n) {
   console.log(slide.src);
   showSlide21(slide21Index);
   console.log("change");
+}
+
+//end
+
+let slide22Index = 0;
+let slide22Src = ["./einspanner.png", "./einspanner.png", "./einspanner.png"];
+showSlide22(slide22Index);
+
+function showSlide22(index) {
+  const slide = document.getElementById('slide22');
+  if (slide) {
+    slide.src = slide22Src[index];
+  }
+}
+
+function changeSlide22(n) {
+  const slide = document.getElementById('slide22');
+  if (slide) {
+    slide22Index = (slide22Index + n + 3) % 3;
+    slide.src = slide22Src[slide22Index];
+    console.log(slide.src);
+    showSlide22(slide22Index);
+    console.log("change");
+  }
+}
+
+//end
+
+let slide23Index = 0;
+let slide23Src = ["./bean.png", "./bean.png", "./bean.png"];
+showSlide23(slide23Index);
+
+function showSlide23(index) {
+  const slide = document.getElementById('slide23');
+  if (slide) {
+    slide.src = slide23Src[index];
+  }
+}
+
+function changeSlide23(n) {
+  const slide = document.getElementById('slide23');
+  if (slide) {
+    slide23Index = (slide23Index + n + 3) % 3;
+    slide.src = slide23Src[slide23Index];
+    console.log(slide.src);
+    showSlide23(slide23Index);
+    console.log("change");
+  }
+}
+
+//end
+
+let slide24Index = 0;
+let slide24Src = ["./burrata.png", "./burrata.png", "./burrata.png"];
+showSlide24(slide24Index);
+
+function showSlide24(index) {
+  const slide = document.getElementById('slide24');
+  if (slide) {
+    slide.src = slide24Src[index];
+  }
+}
+
+function changeSlide24(n) {
+  const slide = document.getElementById('slide24');
+  if (slide) {
+    slide24Index = (slide24Index + n + 3) % 3;
+    slide.src = slide24Src[slide24Index];
+    console.log(slide.src);
+    showSlide24(slide24Index);
+    console.log("change");
+  }
+}
+
+//end
+
+let slide25Index = 0;
+let slide25Src = ["./salad.png", "./salad.png", "./salad.png"];
+showSlide25(slide25Index);
+
+function showSlide25(index) {
+  const slide = document.getElementById('slide25');
+  if (slide) {
+    slide.src = slide25Src[index];
+  }
+}
+
+function changeSlide25(n) {
+  const slide = document.getElementById('slide25');
+  if (slide) {
+    slide25Index = (slide25Index + n + 3) % 3;
+    slide.src = slide25Src[slide25Index];
+    console.log(slide.src);
+    showSlide25(slide25Index);
+    console.log("change");
+  }
 }
 
 //end

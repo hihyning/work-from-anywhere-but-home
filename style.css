@@ -1278,8 +1278,10 @@ li {
     background-color: rgb(135, 118, 91);
     color: white;
   }
+
   #search-button:hover{
     transform: scale(110%);
+    transition: transform 0.3s ease;
   }
   #search-button:active{
     outline: none;
@@ -1364,6 +1366,15 @@ li {
   color: white;
   margin-top: 2%;
   margin-left: 3%;
+}
+#filter-button:hover{
+  transform: scale(110%);
+  transition: transform 0.3s ease;
+}
+#filter-button:active{
+  outline: none;
+  color: rgb(135, 118, 91);
+  background-color: white;
 }
 
 .toggle-button {
