@@ -60,7 +60,7 @@ body {
     top: -100%;
     left: 0;
     animation: slideDownMenu 2.5s forwards;
-    margin-top: 100vh;
+    margin-top: 97vh;
   }
   
   @keyframes slideDownMenu {
@@ -330,7 +330,7 @@ li {
 }
 
 #datetime {
-  margin-top: 70%;
+  margin-top: 69%;
   padding-top: 5%;
 }
 
