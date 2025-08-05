@@ -27,9 +27,10 @@ body {
 }
 
 .introtext p{
-  font-size: 0.8em !important;
+  font-size: 0.75em !important;
   letter-spacing: 0.02em !important;
   line-height: 120% !important;
+  padding-right: 3%;
 }
 
 .thanks {
@@ -148,7 +149,7 @@ color: rgb(135, 118, 91);
 
 .receipttext {
   padding-left: 2vw;
-  width: 68vw;
+  width: 70vw;
 }
 
 #submissionBox {
@@ -330,7 +331,7 @@ li {
 }
 
 #datetime {
-  margin-top: 69%;
+  margin-top: 70%;
   padding-top: 5%;
 }
 
@@ -762,14 +763,13 @@ display: block;
   .introtext{
     padding-left: 1%;
     padding-right: 1%;
-    width: 85%;
   }
 
   .receipt {
     position: fixed;
     top: 0%;
     left: 0;
-    width: 20vw;
+    width: 18vw;
     height: 100vh;
     background-image: url(./receipt\ w\ graphics.png);
     background-repeat: no-repeat;
@@ -1012,7 +1012,7 @@ li {
 }
 
 #datetime {
-  margin-top: 75%;
+  margin-top: 77%;
   width: 100%;
   margin-left: 0%;
   padding-left: 0%;
@@ -1399,4 +1399,23 @@ li {
 
 .filter-section.active {
   display: block;
-}}
+}
+
+.todo-item{
+  font-size: 0.75em;
+  font-family: "IBM Plex Mono", monospace;
+  font-weight: 400;
+  width: 85%;
+  letter-spacing: -0.05em;
+
+}
+.todo-item input[type="text"]{
+  font-size: 0.75em;
+  font-family: "IBM Plex Mono", monospace;
+  font-weight: 400;
+  letter-spacing: -0.05em;
+}
+.todo-item :active[type="text"]{
+  color: rgb(135, 118, 91);
+}
+}

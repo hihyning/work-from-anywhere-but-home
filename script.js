@@ -227,6 +227,56 @@ function getSelectedOptions() {
   }
 }
 
+// Todo List Functions
+function toggleTodo(todoNumber) {
+  const checkbox = document.getElementById(`todo${todoNumber}`);
+  const textInput = document.getElementById(`todoText${todoNumber}`);
+  
+  if (checkbox.checked) {
+    textInput.style.textDecoration = 'line-through';
+    textInput.style.color = '#888';
+  } else {
+    textInput.style.textDecoration = 'none';
+    textInput.style.color = 'black';
+  }
+  
+  // Save the todo state to localStorage
+  saveTodo(todoNumber);
+}
+
+function saveTodo(todoNumber) {
+  const checkbox = document.getElementById(`todo${todoNumber}`);
+  const textInput = document.getElementById(`todoText${todoNumber}`);
+  
+  const todoData = {
+    text: textInput.value,
+    checked: checkbox.checked,
+    textDecoration: textInput.style.textDecoration,
+    color: textInput.style.color
+  };
+  
+  localStorage.setItem(`todo${todoNumber}`, JSON.stringify(todoData));
+}
+
+function loadTodos() {
+  for (let i = 1; i <= 3; i++) {
+    const savedTodo = localStorage.getItem(`todo${i}`);
+    if (savedTodo) {
+      const todoData = JSON.parse(savedTodo);
+      const checkbox = document.getElementById(`todo${i}`);
+      const textInput = document.getElementById(`todoText${i}`);
+      
+      if (checkbox && textInput) {
+        checkbox.checked = todoData.checked;
+        textInput.value = todoData.text;
+        textInput.style.textDecoration = todoData.textDecoration || 'none';
+        textInput.style.color = todoData.color || 'black';
+      }
+    }
+  }
+}
+
+// Load todos when the page loads
 document.addEventListener('DOMContentLoaded', function() {
   // Hide filter content initially
   const tagFilterContent = document.getElementById('tag-filter-check');
@@ -241,6 +291,9 @@ document.addEventListener('DOMContentLoaded', function() {
   
   // Update cafe count
   updateCafeCount();
+  
+  // Load saved todos
+  loadTodos();
 });
 
 // Function to toggle visibility of filter sections
