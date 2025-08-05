@@ -10,9 +10,6 @@ function updateCafeCount() {
   }
 }
 
-// Call the function when the page loads
-document.addEventListener('DOMContentLoaded', updateCafeCount);
-
 function submitName() {
     var name = document.getElementById('nameInput').value;
     document.getElementById('submissionBox').innerHTML = "<p>CUSTOMER: " + name + "</p>";
@@ -194,8 +191,15 @@ document.addEventListener('DOMContentLoaded', function() {
   const tagFilterContent = document.getElementById('tag-filter-check');
   const locationFilterContent = document.getElementById('location-filter-check');
 
-  tagFilterContent.style.display = 'none'; // Hide tag filter initially
-  locationFilterContent.style.display = 'none'; // Hide location filter initially
+  if (tagFilterContent) {
+    tagFilterContent.style.display = 'none'; // Hide tag filter initially
+  }
+  if (locationFilterContent) {
+    locationFilterContent.style.display = 'none'; // Hide location filter initially
+  }
+  
+  // Update cafe count
+  updateCafeCount();
 });
 
 // Function to toggle visibility of filter sections
