@@ -6,7 +6,7 @@ function updateCafeCount() {
   // Update the intro text with the dynamic count
   const introText = document.querySelector('.introtext p');
   if (introText) {
-    introText.innerHTML = `Do you also like to<span style="font-size: 1em; text-align: center; font-weight: 600;"><br>WORK FROM ANYWHERE BUT HOME?<br></span>Here you can find a selection of <strong>${cafeCount}</strong> NYC spaces where you can do just that. Click through for all the details you need to know before you go. Personally curated by me, based on real visits.<br>~ HYNING <a style="font-style: italic" href="https://www.instagram.com/hihyning/">(@hihyning)</a><br><br>Know a place I missed?<br>Submit it here.`;
+    introText.innerHTML = `Do you also like to<span style="font-size: 1em; text-align: center; font-weight: 600;"><br>WORK FROM ANYWHERE BUT HOME?<br></span>Here you can find a selection of <strong>${cafeCount}</strong> NYC spaces where you can do just that. Click through for all the details you need to know before you go. Personally curated by me, based on real visits.<br>~ HYNING <a style="font-style: italic" href="https://www.instagram.com/hihyning/">(@hihyning)</a><br><br>Know a place I missed?<br><a href="https://forms.gle/eTCgYCfLohs5wFWx9" style="text-decoration: underline;">Submit it here.</a>`;
   }
 }
 
