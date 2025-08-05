@@ -239,11 +239,12 @@ function changeSlide(n) {
 
 let slide2Index = 0;
 let slide2Src = ["./plantshed/plantshed1.png", "./plantshed/plantshed2.png", "./plantshed/plantshed3.png"]
-showSlide2(slide2Index);
 
 function showSlide2(index) {
   const slide = document.getElementById('slide2');
-  slide.src = slide2Src[index];
+  if (slide) {
+    slide.src = slide2Src[index];
+  }
 }
 
 function changeSlide2(n) {
