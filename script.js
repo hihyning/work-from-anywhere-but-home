@@ -284,6 +284,7 @@ function changeSlide(n) {
 
 let slide2Index = 0;
 let slide2Src = ["./plantshed/plantshed1.png", "./plantshed/plantshed2.png", "./plantshed/plantshed3.png"]
+showSlide2(slide2Index);
 
 function showSlide2(index) {
   const slide = document.getElementById('slide2');
@@ -346,6 +347,7 @@ function changeSlide4(n) {
 
 let slide5Index = 0;
 let slide5Src = ["./threejewels/threejewels1.png", "./threejewels/threejewels2.png", "./threejewels/threejewels3.png"];
+showSlide5(slide5Index);
 
 function showSlide5(index) {
   const slide = document.getElementById('slide5');
